@@ -50,6 +50,16 @@
             <option value="teacher">Your first teacher?</option>
           </select>
         </div>
+        <div class="form-group">
+          <textarea
+            name="questionAnswer"
+            rows="3"
+            class="form-control"
+            [(ngModel)]="answer"
+          ></textarea>
+        </div>
+        <p>Your reply:{{ answer }}</p>
+
         <!-- disable the form when the form is not valid -->
         <button class="btn btn-primary" type="submit" [disabled]="!f.valid">
           Submit
