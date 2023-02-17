@@ -8,6 +8,8 @@ import { NgForm } from '@angular/forms';
 })
 export class AppComponent {
   @ViewChild('f') signupForm: NgForm;
+  //property binding to value in html to display default question in dropdown
+  defaultQuestion: string = 'pet';
   suggestUserName() {
     const suggestedName = 'Superuser';
   }
