@@ -17,6 +17,23 @@ export class AppComponent {
 
   suggestUserName() {
     const suggestedName = 'Superuser';
+    //with the set value command,you pass an exact copy of the form value,
+    //sets your whole form
+    // this.signupForm.setValue({
+    //   userData: {
+    //     username: suggestedName,
+    //     email: '',
+    //   },
+    //   secret: 'pet',
+    //   questionAnswer: '',
+    //   selectedGender: 'male',
+    // });
+    //sets parts of the form
+    this.signupForm.form.patchValue({
+      userData: {
+        username: suggestedName,
+      },
+    });
   }
 
   // onSubmit(form: NgForm) {
