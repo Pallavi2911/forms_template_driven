@@ -59,5 +59,9 @@ export class AppComponent {
     this.user.secretQuestion = this.signupForm.value.secret;
     this.user.answer = this.signupForm.value.questionAnswer;
     this.user.gender = this.signupForm.value.selectedGender;
+
+    //it will not only empty all the inputs but It will also reset the state
+    //like the valid detached and so on these properties.
+    this.signupForm.reset();
   }
 }
